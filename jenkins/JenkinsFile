@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "erikturner/vault"
+    registry = "****/vault"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
@@ -21,7 +21,7 @@ pipeline {
         }
     stage('Cloning Git') {
       steps {
-        git 'https://github.com/Glitterati_Ent/ec2-hashicorp-vault.git'
+        git 'https://github.com/****/ec2-hashicorp-vault.git'
       }
     }
     stage('Building image') {
