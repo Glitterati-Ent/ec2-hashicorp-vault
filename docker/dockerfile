@@ -1,0 +1,11 @@
+FROM centos:7
+
+RUN yum update -y
+RUN mkdir -p /opt/application
+
+WORKDIR /opt/application
+
+COPY . .
+
+EXPOSE 5000
+CMD ["./vault"]
